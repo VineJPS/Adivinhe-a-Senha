@@ -1,2 +1,3 @@
 # Adivinhe-a-Senha
-Tente adivinhar a senha
+## Tente adivinhar a senha
+### Jogo simples feito  com Java Script, Html e CSS.
