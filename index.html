@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinhe a senha</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="txt">
             <h1>Tente adivinhar a senha!</h1>
-            <p>Boa Sorte</p>
+            <p>Boa Sorte, não reinicie a pagina!</p>
         </div>
         <div class="logo">
             <h2>VJ</h2>
         </div>
     </header>
     <main>
-        <form action="#">
+        <div class="form">
             <div class="resposta">
                 <h3>Insira seu palpite</h3>
                 <div class="inputs">
@@ -29,10 +29,9 @@
                 </div>
             </div>
             <div class="area_botao">
-                <input class="botao" type="submit" value="Enviar" id="enviar"> 
-                <input class="botao" type="submit" value="Desistir" id="desistir"> 
+                <input class="botao" type="button" value="Enviar" id="btn"> 
             </div>
-        </form>
+        </div>
     </main>
     <footer>
         <h1>Feito por Vinicius. 12/05/2024</h1>
