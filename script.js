@@ -7,11 +7,13 @@ const n4 = document.getElementById("n4");
 //Gerar senha aleatoria
 function gerarSenhaAleatoria() {
     var senha = [];
-    for (var i = 0; i < 4; i++) {
-        var digitoAleatorio = Math.floor(Math.random() * 10); 
-        senha += [digitoAleatorio];
+    while (senha.length < 4) {
+        var digitoAleatorio = Math.floor(Math.random() * 10);
+        if (!senha.includes(digitoAleatorio)) {
+            senha.push(digitoAleatorio);
+        }
     }
-    return senha;
+    return senha.join(''); // Retorna a senha como uma string em vez de uma matriz
 }
 let codigo = gerarSenhaAleatoria()
 console.log('Senha correta: ' + codigo)
