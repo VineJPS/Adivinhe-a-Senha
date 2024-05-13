@@ -13,7 +13,7 @@ function gerarSenhaAleatoria() {
             senha.push(digitoAleatorio);
         }
     }
-    return senha.join(''); // Retorna a senha como uma string em vez de uma matriz
+    return senha.join(''); 
 }
 let codigo = gerarSenhaAleatoria()
 console.log('Senha correta: ' + codigo)
