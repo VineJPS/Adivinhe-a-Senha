@@ -14,6 +14,7 @@ function gerarSenhaAleatoria() {
     return senha;
 }
 let codigo = gerarSenhaAleatoria()
+console.log('Senha correta: ' + codigo)
 
 btn.addEventListener('click', function () {
     //definindo as variaveis
@@ -22,10 +23,6 @@ btn.addEventListener('click', function () {
     let N3 = n3.value;
     let N4 = n4.value;
     
-    //definindo as respostas
-    let acerto = false;
-    console.log('Senha correta: ' + codigo)
- 
     //pegando os numeros
     let numeros_inseridos = [N1, N2, N3, N4];
     console.log(numeros_inseridos)
@@ -37,30 +34,18 @@ btn.addEventListener('click', function () {
     let i = 0;
     let n = 0;
 
-    //Validadndo os numeros recebidos
-
-    //validando acertos nos lugares certos
-    // count = 0;
-    // acertos = 0;
-    // while(count <= 3){
-    //     if(numeros_inseridos[count] == codigo[count]){
-    //         acertos = acertos + 1
-    //     }
-    //     count = count + 1
-    // }
-    // console.log('Numeros certos, nos lugares certos => ' + acertos)
-    
+    //Validadndo os numeros recebidos    
     //Validadndo acetos mas nos lugares errados 
     while(count <= 3){
         while(i <= 3 ){
             if(n == i){
                 if(numeros_inseridos[n] == codigo[i]){
                     acertos = acertos + 1
-                    console.log (' certo ' + acertos + ' n= ' + n + ' i= ' + i)
+                    //console.log (' certo ' + acertos + ' n= ' + n + ' i= ' + i)
                 }
             }else if(numeros_inseridos[n] == codigo[i]){
                     posicaoErrada = posicaoErrada + 1
-                    console.log (' errado ' + posicaoErrada + ' n= ' + n + ' i= ' + i)
+                    //console.log (' errado ' + posicaoErrada + ' n= ' + n + ' i= ' + i)
             }
             i++
         }
@@ -71,8 +56,8 @@ btn.addEventListener('click', function () {
     }
 
 
-    console.log("Numeros certos mas na posição errada => " + posicaoErrada)
-    console.log("Numeros certos na posição certa => " + acertos)
+    alert("Numeros certos mas na posição errada => " + posicaoErrada)
+    alert("Numeros certos na posição certa => " + acertos)
 
     if(acertos === 4){
         alert("Acertou tudo!, reinicie a pagina para gerar um novo codigo")
