@@ -1,41 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinhe a senha</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <script src="script.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <div class="txt">
-            <h2>Tente adivinhar a senha!</h2>
-            <p>Boa Sorte, não reinicie a pagina!</p>
-        </div>
-        <div class="logo">
-            <h2>VJ</h2>
-        </div>
-    </header>
-    <main>
-        <div class="form">
-            <div class="resposta">
-                <h3>Insira seu palpite</h3>
-                <div class="inputs">
-                    <input class="caixa_texto" type="number"  step="1"  name="n1" id="n1">
-                    <input class="caixa_texto" type="number"  step="1"  name="n2" id="n2">
-                    <input class="caixa_texto" type="number"  step="1"  name="n3" id="n3">
-                    <input class="caixa_texto" type="number"  step="1"  name="n4" id="n4">
+    <div class="container">
+        <header>
+            <i class="ph ph-repeat reiniciar"></i>
+            <h1 class="titulo">Adivinhe a Senha</h1>
+            <a href="https://github.com/VineJPS" target="_blank" class="logo">VJ</a>
+        </header>
+        <main>
+            <div class="form">
+                <div class="tituloContador">
+                    <h1>Tentativas: </h1>
+                </div>
+                <div class="historicoRespostas">
+                    <div class="resposta">
+                        <div class="numeracao">
+                            <h1>1</h3>
+                        </div>
+                        <div class="numeroInserido coluna">
+                            <h3>Numero Inserido</h3>
+                            <p>1234</p>
+                        </div>
+                        <div class="lugarCerto coluna">
+                            <h3>lugar certo</h3>
+                            <p>**</p>
+                        </div>
+                        <div class="lugarErrado coluna">
+                            <h3>Lugar errado</h3>
+                            <p>**</p>
+                        </div>
+                        <div class="certo_errado">
+                            <img src="./img/certo.png" alt="" class="imgValiacao">
+                        </div>
+                    </div>
+                    <div class="resposta">
+                        <div class="numeracao">
+                            <h1>1</h3>
+                        </div>
+                        <div class="numeroInserido coluna">
+                            <h3>Numero Inserido</h3>
+                            <p>1234</p>
+                        </div>
+                        <div class="lugarCerto coluna">
+                            <h3>lugar certo</h3>
+                            <p>**</p>
+                        </div>
+                        <div class="lugarErrado coluna">
+                            <h3>Lugar errado</h3>
+                            <p>**</p>
+                        </div>
+                        <div class="certo_errado">
+                            <img src="./img/certo.png" alt="" class="imgValiacao">
+                        </div>
+                    </div>
+                     <div class="resposta">
+                        <div class="numeracao">
+                            <h1>1</h3>
+                        </div>
+                        <div class="numeroInserido coluna">
+                            <h3>Numero Inserido</h3>
+                            <p>1234</p>
+                        </div>
+                        <div class="lugarCerto coluna">
+                            <h3>lugar certo</h3>
+                            <p>**</p>
+                        </div>
+                        <div class="lugarErrado coluna">
+                            <h3>Lugar errado</h3>
+                            <p>**</p>
+                        </div>
+                        <div class="certo_errado">
+                            <img src="./img/certo.png" alt="" class="imgValiacao">
+                        </div>
+                    </div>
+                </div>
+                <div class="inserirRespostas">
+                    <div class="inputs">
+                        <input class="caixa_texto" type="number" step="1" name="n1" id="n1">
+                        <input class="caixa_texto" type="number" step="1" name="n2" id="n2">
+                        <input class="caixa_texto" type="number" step="1" name="n3" id="n3">
+                        <input class="caixa_texto" type="number" step="1" name="n4" id="n4">
+                    </div>
+                    <div class="botoes">
+                        <input class="botao" type="button" value="Enviar" id="btn-enviar">
+                        <input class="botao" type="button" value="Desistir" id="btn-desistir">
+                    </div>
                 </div>
             </div>
-            <div class="area_botao">
-                <input class="botao" type="button" value="Enviar" id="btn"> 
-            </div>
-        </div>
-    </main>
-    <footer>
-        <h3>Feito por Vinicius. 12/05/2024</h3>
-    </footer>
-
+        </main>
+    </div>
 </body>
+
 </html>
