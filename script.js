@@ -4,6 +4,18 @@ const n2 = document.getElementById("n2");
 const n3 = document.getElementById("n3");
 const n4 = document.getElementById("n4");
 
+
+//garante que receba somente valores validos
+function validarNumero(input) {
+    // Remover todos os caracteres exceto números
+    input.value = input.value.replace(/\D/g,'');
+
+    // Garantir que o número esteja entre 0 e 9
+    if (parseInt(input.value) > 9) {
+        input.value = 9;
+    }
+}
+
 //Gerar senha aleatoria
 function gerarSenhaAleatoria() {
     var senha = [];

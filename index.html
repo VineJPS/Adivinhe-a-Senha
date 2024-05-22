@@ -40,60 +40,20 @@
                             <p>**</p>
                         </div>
                         <div class="certo_errado">
-                            <img src="./img/certo.png" alt="" class="imgValiacao">
-                        </div>
-                    </div>
-                    <div class="resposta">
-                        <div class="numeracao">
-                            <h1>1</h3>
-                        </div>
-                        <div class="numeroInserido coluna">
-                            <h3>Numero Inserido</h3>
-                            <p>1234</p>
-                        </div>
-                        <div class="lugarCerto coluna">
-                            <h3>lugar certo</h3>
-                            <p>**</p>
-                        </div>
-                        <div class="lugarErrado coluna">
-                            <h3>Lugar errado</h3>
-                            <p>**</p>
-                        </div>
-                        <div class="certo_errado">
-                            <img src="./img/certo.png" alt="" class="imgValiacao">
-                        </div>
-                    </div>
-                     <div class="resposta">
-                        <div class="numeracao">
-                            <h1>1</h3>
-                        </div>
-                        <div class="numeroInserido coluna">
-                            <h3>Numero Inserido</h3>
-                            <p>1234</p>
-                        </div>
-                        <div class="lugarCerto coluna">
-                            <h3>lugar certo</h3>
-                            <p>**</p>
-                        </div>
-                        <div class="lugarErrado coluna">
-                            <h3>Lugar errado</h3>
-                            <p>**</p>
-                        </div>
-                        <div class="certo_errado">
-                            <img src="./img/certo.png" alt="" class="imgValiacao">
+                            <img src="./img/errado.png" alt="" class="imgValiacao">
                         </div>
                     </div>
                 </div>
                 <div class="inserirRespostas">
                     <div class="inputs">
-                        <input class="caixa_texto" type="number" step="1" name="n1" id="n1">
-                        <input class="caixa_texto" type="number" step="1" name="n2" id="n2">
-                        <input class="caixa_texto" type="number" step="1" name="n3" id="n3">
-                        <input class="caixa_texto" type="number" step="1" name="n4" id="n4">
+                        <input class="caixa_texto" type="number" step="1" name="n1" id="n1"  oninput="validarNumero(this)">
+                        <input class="caixa_texto" type="number" step="1" name="n2" id="n2"  oninput="validarNumero(this)">
+                        <input class="caixa_texto" type="number" step="1" name="n3" id="n3"  oninput="validarNumero(this)">
+                        <input class="caixa_texto" type="number" step="1" name="n4" id="n4"  oninput="validarNumero(this)">
                     </div>
                     <div class="botoes">
-                        <input class="botao" type="button" value="Enviar" id="btn-enviar">
-                        <input class="botao" type="button" value="Desistir" id="btn-desistir">
+                        <input class="botao" type="button" class="botao" value="Enviar" id="btn-enviar">
+                        <input class="botao" type="button" class="botao" value="Desistir" id="btn-desistir">
                     </div>
                 </div>
             </div>
