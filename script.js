@@ -82,25 +82,25 @@ btnEnviar.addEventListener('click', function () {
     //Jogando os valores na tela pelo innerHTML
     
         resultados.innerHTML += `
-     <div  class="resposta">
-        <div class="numeracao">
-            <h1>${tentativas}</h3>
-        </div>
-        <div class="numeroInserido coluna">
-            <h3>Numero Inserido</h3>
-            <p>${numeros_inseridos}</p>
-        </div>
-        <div class="lugarCerto coluna">
-            <h3>lugar certo</h3>
-            <p>${acertos}</p>
-        </div>
-        <div class="lugarErrado coluna">
-            <h3>Lugar errado</h3>
-            <p>${posicaoErrada}</p>
-        </div>
-        <div class="certo_errado">
-        ${acertos == 4 ? '<img src="./img/certo.png" alt="" class="imgValiacao">' : '<img src="./img/errado.png" alt="" class="imgValiacao">'}
-        </div>
+        <div  class="resposta">
+            <div class="numeracao">
+                <h1>${tentativas}</h3>
+            </div>
+            <div class="numeroInserido coluna">
+                <h3>Numero Inserido</h3>
+                <p>${numeros_inseridos}</p>
+            </div>
+            <div class="lugarCerto coluna">
+                <h3>lugar certo</h3>
+                <p>${acertos}</p>
+            </div>
+            <div class="lugarErrado coluna">
+                <h3>Lugar errado</h3>
+                <p>${posicaoErrada}</p>
+            </div>
+            <div class="certo_errado">
+                ${acertos == 4 ? '<img src="./img/certo.png" alt="" class="imgValiacao">' : '<img src="./img/errado.png" alt="" class="imgValiacao">'}
+            </div>
         </div>`
 
         if(acertos == 4){
