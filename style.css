@@ -53,6 +53,9 @@ main{
 .tituloContador h1{
     text-align: center;
     padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .historicoRespostas{
     width: 100%;
@@ -67,6 +70,9 @@ main{
     height: 100px;
     gap: 3em;
     align-items: center;
+}
+.desaparecer{
+    display: none;
 }
 .imgValiacao{
     width: 30%;
@@ -121,19 +127,19 @@ main{
     font-weight: bold;
     color: white;
 }
-#btn-enviar{
+#btnEnviar{
     background: #0b923a;
 }
-#btn-enviar:hover{
+#btnEnviar:hover{
     background: rgb(0, 225, 169);
     color:#012030;
     cursor: pointer;
     transition: 0.2s;
 }
-#btn-desistir{
+#btnDesistir{
     background: red;
 }
-#btn-desistir:hover{
+#btnDesistir:hover{
     background: rgb(234, 118, 118);
     color:#9e3f3f;
     cursor: pointer;

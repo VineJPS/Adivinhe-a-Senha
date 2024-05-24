@@ -1,14 +1,16 @@
 //Pegando dados do formulario
-const n1 = document.getElementById("n1")
+const n1 = document.getElementById("n1");
 const n2 = document.getElementById("n2");
 const n3 = document.getElementById("n3");
 const n4 = document.getElementById("n4");
 
+const contado = document.getElementById("contador");
 
+let tentativas = 0;
 //garante que receba somente valores validos
 function validarNumero(input) {
     // Remover todos os caracteres exceto números
-    input.value = input.value.replace(/\D/g,'');
+    input.value = input.value.replace(/\D/g, '');
 
     // Garantir que o número esteja entre 0 e 9
     if (parseInt(input.value) > 9) {
@@ -25,18 +27,24 @@ function gerarSenhaAleatoria() {
             senha.push(digitoAleatorio);
         }
     }
-    return senha.join(''); 
+    return senha.join('');
 }
-let codigo = gerarSenhaAleatoria()
-console.log('Senha correta: ' + codigo)
+    
+    let codigo = gerarSenhaAleatoria()
+    console.log('Senha correta: ' + codigo)
 
-btn.addEventListener('click', function () {
+btnEnviar.addEventListener('click', function () {
     //definindo as variaveis
     let N1 = n1.value;
     let N2 = n2.value;
     let N3 = n3.value;
     let N4 = n4.value;
-    
+
+    //Tentativas de adivinhação
+    tentativas = tentativas + 1
+    let contador = contado;
+    contador.innerHTML = "<h1 style='font-size:1em'>" + 'Tentativas ' + tentativas + "</h1>"
+
     //pegando os numeros
     let numeros_inseridos = [N1, N2, N3, N4];
     console.log(numeros_inseridos)
@@ -50,22 +58,22 @@ btn.addEventListener('click', function () {
 
     //Validadndo os numeros recebidos    
     //Validadndo acetos mas nos lugares errados 
-    while(count <= 3){
-        while(i <= 3 ){
-            if(n == i){
-                if(numeros_inseridos[n] == codigo[i]){
+    while (count <= 3) {
+        while (i <= 3) {
+            if (n == i) {
+                if (numeros_inseridos[n] == codigo[i]) {
                     acertos = acertos + 1
                     //console.log (' certo ' + acertos + ' n= ' + n + ' i= ' + i)
                 }
-            }else if(numeros_inseridos[n] == codigo[i]){
-                    posicaoErrada = posicaoErrada + 1
-                    //console.log (' errado ' + posicaoErrada + ' n= ' + n + ' i= ' + i)
+            } else if (numeros_inseridos[n] == codigo[i]) {
+                posicaoErrada = posicaoErrada + 1
+                //console.log (' errado ' + posicaoErrada + ' n= ' + n + ' i= ' + i)
             }
             i++
         }
         n++
-        if(n > 3){ n = 0 }
-        if(i > 3){ i = 0 }
+        if (n > 3) { n = 0 }
+        if (i > 3) { i = 0 }
         count = count + 1;
     }
 
@@ -73,15 +81,15 @@ btn.addEventListener('click', function () {
     alert("Numeros certos mas na posição errada => " + posicaoErrada)
     alert("Numeros certos na posição certa => " + acertos)
 
-    if(acertos === 4){
+    if (acertos === 4) {
         alert("Acertou tudo!, reinicie a pagina para gerar um novo codigo")
-    }else{
+    } else {
         count = 0;
         n = 0;
         i = 0;
         acertos = 0;
         posicaoErrada = 0;
     }
-    
-   
+
+
 })
