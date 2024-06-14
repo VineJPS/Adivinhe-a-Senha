@@ -19,6 +19,10 @@ function validarNumero(input) {
         input.value = 9;
     }
 }
+//Função para reiniciar a pagina
+function reloadPage() {
+    location.reload();
+}
 
 //Gerar senha aleatoria
 function gerarSenhaAleatoria() {

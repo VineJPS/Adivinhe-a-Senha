@@ -36,6 +36,7 @@ header{
 }
 .reiniciar{
     font-size: 3em;
+    cursor: pointer;
 }
 main{
     width: 100%;
