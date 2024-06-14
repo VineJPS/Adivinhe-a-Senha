@@ -23,7 +23,9 @@ function validarNumero(input) {
 function reloadPage() {
     location.reload();
 }
-
+function resposta(){
+    window.alert(codigo);
+}
 //Gerar senha aleatoria
 function gerarSenhaAleatoria() {
     var senha = [];
