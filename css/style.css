@@ -144,3 +144,49 @@ main{
     cursor: pointer;
     transition: 0.2s;
 }
+
+@media screen and (max-width: 904px) {
+    header{
+        font-size: 1em;
+        gap: 20px;
+        height: 10vh;
+    }
+    header h1{
+        font-size: 1em;
+    }
+    header .logo{
+        font-size: 1em;
+    }
+    main{
+        border-radius: 10px;
+    }
+    .container{
+        margin: auto;
+        width: 95%;
+    }
+    .caixa_texto{
+        width: 25%;
+        height: 60%;
+    }
+    .botao{
+        display: flex;
+        border-radius: 50px;
+    }
+    .resposta{
+        height: 50px;
+        font-size: 0.7em;
+    }
+    form{
+        height: 100%;
+    }
+    .inserirRespostas{
+        padding-top: 40px;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+    .botoes{
+        display: flex;
+        flex-direction: row;
+    }
+}
