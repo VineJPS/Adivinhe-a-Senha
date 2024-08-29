@@ -163,6 +163,7 @@ main{
     .container{
         margin: auto;
         width: 95%;
+        height: 80vh;
     }
     .caixa_texto{
         width: 25%;
