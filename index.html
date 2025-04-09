@@ -11,54 +11,56 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <i class="ph ph-repeat reiniciar" onclick="reloadPage()"></i>
-            <h1 class="titulo">Adivinhe a Senha</h1>
-            <a href="https://github.com/VineJPS" target="_blank" class="logo">VJ</a>
-        </header>
-        <main>
-            <div class="form">
-                <div class="tituloContador">
-                    <h1 id="contador">Tentativas: </h1>
-                </div>
-                <div id="results" class="historicoRespostas">
-                    <div  class="resposta ">
-                        <div class="numeracao">
-                            <h1>Nº</h3>
+    
+        <div class="container">
+            <header>
+                <i class="ph ph-repeat reiniciar" onclick="reloadPage()"></i>
+                <h1 class="titulo">Adivinhe a Senha</h1>
+                <a href="https://github.com/VineJPS" target="_blank" class="logo">VJ</a>
+            </header>
+            <main>
+                <div class="form">
+                    <div class="tituloContador">
+                        <h1 id="contador">Tentativas: </h1>
+                    </div>
+                    <div id="results" class="historicoRespostas">
+                        <div  class="resposta ">
+                            <div class="numeracao">
+                                <h1>Nº</h3>
+                            </div>
+                            <div class="numeroInserido coluna">
+                                <h3>Numero Inserido</h3>
+                                <p>Valor</p>
+                            </div>
+                            <div class="lugarCerto coluna">
+                                <h3>lugar certo</h3>
+                                <p>Valor</p>
+                            </div>
+                            <div class="lugarErrado coluna">
+                                <h3>Lugar errado</h3>
+                                <p>Valor</p>
+                            </div>
+                            <div class="certo_errado">
+                                <img src="#" alt="Classificação" class="imgValiacao">
+                            </div>
                         </div>
-                        <div class="numeroInserido coluna">
-                            <h3>Numero Inserido</h3>
-                            <p>Valor</p>
+                    </div>
+                    <div class="inserirRespostas">
+                        <div class="inputs">
+                            <input class="caixa_texto" type="number" step="1" name="n1" id="n1"  oninput="validarNumero(this)">
+                            <input class="caixa_texto" type="number" step="1" name="n2" id="n2"  oninput="validarNumero(this)">
+                            <input class="caixa_texto" type="number" step="1" name="n3" id="n3"  oninput="validarNumero(this)">
+                            <input class="caixa_texto" type="number" step="1" name="n4" id="n4"  oninput="validarNumero(this)">
                         </div>
-                        <div class="lugarCerto coluna">
-                            <h3>lugar certo</h3>
-                            <p>Valor</p>
-                        </div>
-                        <div class="lugarErrado coluna">
-                            <h3>Lugar errado</h3>
-                            <p>Valor</p>
-                        </div>
-                        <div class="certo_errado">
-                            <img src="#" alt="Classificação" class="imgValiacao">
+                        <div class="botoes">
+                            <input class="botao" type="button" class="botao" value="Enviar" id="btnEnviar">
+                            <input class="botao" type="button" class="botao" value="Desistir" id="btnDesistir" onclick="resposta()">
                         </div>
                     </div>
                 </div>
-                <div class="inserirRespostas">
-                    <div class="inputs">
-                        <input class="caixa_texto" type="number" step="1" name="n1" id="n1"  oninput="validarNumero(this)">
-                        <input class="caixa_texto" type="number" step="1" name="n2" id="n2"  oninput="validarNumero(this)">
-                        <input class="caixa_texto" type="number" step="1" name="n3" id="n3"  oninput="validarNumero(this)">
-                        <input class="caixa_texto" type="number" step="1" name="n4" id="n4"  oninput="validarNumero(this)">
-                    </div>
-                    <div class="botoes">
-                        <input class="botao" type="button" class="botao" value="Enviar" id="btnEnviar">
-                        <input class="botao" type="button" class="botao" value="Desistir" id="btnDesistir" onclick="resposta()">
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
+            </main>
+        </div>
+    
 </body>
 
 </html>
