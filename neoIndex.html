@@ -5,33 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinhe a senha</title>
     <link rel="stylesheet" href="css/neoStyle.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
         <div class="container">
             <header>
                 <h1>Adivinhe a Senha</h1>
+                <h1>Tentativas</h1>
             </header>
             
             <main>
-                <h1>Tentativas</h1>
                 <div class="respostas">
                     <div class="row">
                         <div class="col">Nº</div>
-                        <div class="col">Numero Inserido</div>
-                        <div class="col">Lugar Certo</div>
-                        <div class="col">Lugar Errado</div>
+                        <div class="col">Nº Inserido</div>
+                        <div class="col">Acertos</div>
+                        <div class="col">Erros</div>
                     </div>  
+                    <div class="row">
+                        <div class="col">1</div>
+                        <div class="col">7894</div>
+                        <div class="col">2</div>
+                        <div class="col">2</div>
+                    </div>  
+                    <div class="row">
+                        <div class="col">1</div>
+                        <div class="col">7894</div>
+                        <div class="col">2</div>
+                        <div class="col">2</div>
+                    </div> 
+                   
+                  
                 </div>
                 <div class="inserirRespostas">
                     <div class="row">
-                        <input id="N1" name="N1" type="text">
-                        <input id="N2" name="N2" type="text">
-                        <input id="N3" name="N3" type="text">
-                        <input id="N4" name="N4" type="text">
+                        <input class="inputs" id="N1" name="N1" type="text">
+                        <input class="inputs" id="N2" name="N2" type="text">
+                        <input class="inputs" id="N3" name="N3" type="text">
+                        <input class="inputs" id="N4" name="N4" type="text">
                     </div>
                     <div class="row">
-                       <input type="button" value="Enviar" id="btnEnviar">
-                       <input type="button" value="Desistir" id="btnDesistir">
+                       <input class="button" type="button" value="Enviar" id="btnEnviar">
+                       <input class="button" type="button" value="Desistir" id="btnDesistir">
                     </div>
                 </div>
             </main>
