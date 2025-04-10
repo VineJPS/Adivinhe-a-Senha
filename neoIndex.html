@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adivinhe a senha</title>
     <link rel="stylesheet" href="css/neoStyle.css">
+    <script src="script.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
 </head>
@@ -12,42 +13,28 @@
         <div class="container">
             <header>
                 <h1>Adivinhe a Senha</h1>
-                <h1>Tentativas</h1>
+                <h1 id="contador">Tentativas</h1>
             </header>
             
             <main>
-                <div class="respostas">
-                    <div class="row">
+                <div class="respostas" id="results">
+                    <div class="row" >
                         <div class="col">Nº</div>
                         <div class="col">Nº Inserido</div>
                         <div class="col">Acertos</div>
                         <div class="col">Erros</div>
                     </div>  
-                    <div class="row">
-                        <div class="col">1</div>
-                        <div class="col">7894</div>
-                        <div class="col">2</div>
-                        <div class="col">2</div>
-                    </div>  
-                    <div class="row">
-                        <div class="col">1</div>
-                        <div class="col">7894</div>
-                        <div class="col">2</div>
-                        <div class="col">2</div>
-                    </div> 
-                   
-                  
                 </div>
                 <div class="inserirRespostas">
                     <div class="row">
-                        <input class="inputs" id="N1" name="N1" type="text">
-                        <input class="inputs" id="N2" name="N2" type="text">
-                        <input class="inputs" id="N3" name="N3" type="text">
-                        <input class="inputs" id="N4" name="N4" type="text">
+                        <input class="inputs" id="n1" name="n1" type="text" oninput="validarNumero(this)">
+                        <input class="inputs" id="n2" name="n2" type="text" oninput="validarNumero(this)">
+                        <input class="inputs" id="n3" name="n3" type="text" oninput="validarNumero(this)">
+                        <input class="inputs" id="n4" name="n4" type="text" oninput="validarNumero(this)">
                     </div>
                     <div class="row">
                        <input class="button" type="button" value="Enviar" id="btnEnviar">
-                       <input class="button" type="button" value="Desistir" id="btnDesistir">
+                       <input class="button" type="button" value="Desistir" onclick="resposta()" id="btnDesistir">
                     </div>
                 </div>
             </main>
